@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WearDemo</string>
+    <string name="init_values">Getting data &#8230;</string>
+    <string name="health_steps">Steps</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="zero">0</string>
+</resources>

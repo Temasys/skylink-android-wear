@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SkylinkWearApp</string>
+
+    <string name="hello_world">Skylink Wear</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="join_room">Broadcast</string>
+    <string name="leave_room">Leave room</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="step_count">Step Count</string>
+    <string name="gyroscope">Gyroscope</string>
+    <string name="zero">0</string>
+
+
+
+</resources>
