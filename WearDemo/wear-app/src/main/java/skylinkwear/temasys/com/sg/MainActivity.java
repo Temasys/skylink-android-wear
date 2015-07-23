@@ -103,21 +103,24 @@ public class MainActivity extends Activity implements SensorEventListener {
         SensorMessage sensorMessage = new SensorMessage();
 
         if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
+
             sensorMessage.setHeartRate((int) event.values[0]);
 
-            // Update UI on watch face
-            String msg = "" + sensorMessage.getHeartRate();
-            healthSensorFragment.setHeartRate(msg);
-            Log.d(TAG, "Heart Rate " + msg);
+            if (sensorMessage.getHeartRate() != 0) {
+                // Update UI on watch face
+                String msg = "" + sensorMessage.getHeartRate();
+                healthSensorFragment.setHeartRate(msg);
+                Log.d(TAG, "Heart Rate " + msg);
+            }
 
         } else if (event.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
             sensorMessage.setStepCount((int) event.values[0]);
-
-            // Update UI on watch face
-            String msg = "" + sensorMessage.getStepCount();
-            Log.d(TAG, "Step count " + msg);
-            healthSensorFragment.setStepCounter(msg);
-
+            if (sensorMessage.getStepCount() != 0) {
+                // Update UI on watch face
+                String msg = "" + sensorMessage.getStepCount();
+                Log.d(TAG, "Step count " + msg);
+                healthSensorFragment.setStepCounter(msg);
+            }
         } else if (event.sensor.getType() == Sensor.TYPE_GYROSCOPE) {
 
             sensorMessage.setGyroscopeX(event.values[0]);
